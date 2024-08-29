@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border: 1px solid #00796b;
+        }
+        .inputbox {
+            margin-bottom: 20px;
+        }
+        .inputbox label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #00796b;
+        }
+        .inputbox input[type="text"],
+        .inputbox input[type="number"],
+        .inputbox select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #00796b;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: #f1f8e9;
+            color: #004d40;
+        }
+        .inputbox input[type="text"]::placeholder,
+        .inputbox input[type="number"]::placeholder {
+            color: #004d40;
+        }
+        .inputbox input[type="radio"] {
+            margin-right: 8px;
+        }
+        .inputbox div {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .inputbox label[for="male"],
+        .inputbox label[for="female"] {
+            font-weight: normal;
+            color: #004d40;
+        }
+        .inputbox select {
+            cursor: pointer;
+            background-color: #f1f8e9;
+        }
+        .inputbox input[type="radio"] + label {
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="inputbox">
+            <label for="name">
+                Name
+                <input id="name" type="text" placeholder="Enter your name" />
+            </label>
+        </div>
+        <div class="inputbox">
+            <label for="rollnumber">
+                Roll Number
+                <input id="rollnumber" type="number" name="rollnumber" placeholder="Enter roll number" />
+            </label>
+        </div>
+        <div class="inputbox">
+            <label for="section">
+                Section
+                <select id="section" name="section">
+                    <option value="-">-----</option>
+                    <option value="IT">IT</option>
+                    <option value="CSE">CSE</option>
+                    <option value="EEE">EEE</option>
+                </select>
+            </label>
+        </div>
+        <div class="inputbox">
+            <label>
+                Gender
+                <div>
+                    <input type="radio" id="male" name="gender" value="male" />
+                    <label for="male">Male</label>
+                </div>
+                <div>
+                    <input type="radio" id="female" name="gender" value="female" />
+                    <label for="female">Female</label>
+                </div>
+            </label>
+        </div>
+    </form>
+</body>
+</html>
