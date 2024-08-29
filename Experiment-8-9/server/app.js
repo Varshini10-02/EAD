@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const cors=require('cors')
 const url = 'mongodb://localhost/CBIT'
 const app = express()
-const studentsrouter = require('./routes/student')
+const studentsrouter = require('./routes/students')
 mongoose.connect(url, {useNewUrlParser:true})
 const con = mongoose.connection
 con.on('open', () =>
