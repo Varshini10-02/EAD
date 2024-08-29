@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chessboard</title>
+    <style>
+        .chessbox {
+            display: grid;
+            grid-template-columns: repeat(8, 50px);
+            grid-template-rows: repeat(8, 50px);
+            border: 1px solid green;
+        }
+        .box {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: transparent;
+        }
+        .box:nth-child(odd) {
+            background-color: white;
+        }
+        .box:nth-child(even) {
+            background-color: black;
+        }
+        .row:nth-child(even) .box:nth-child(odd),
+        .row:nth-child(odd) .box:nth-child(even) {
+            background-color: black;
+        }
+        .row:nth-child(even) .box:nth-child(even),
+        .row:nth-child(odd) .box:nth-child(odd) {
+            background-color: white;
+        }
+        .black-piece {
+            color: black;
+        }
+        .white-piece {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="chessbox">
+        <div class="row">
+            <div class="box black-piece">♜</div>
+            <div class="box black-piece">♞</div>
+            <div class="box black-piece">♝</div>
+            <div class="box black-piece">♛</div>
+            <div class="box black-piece">♚</div>
+            <div class="box black-piece">♝</div>
+            <div class="box black-piece">♞</div>
+            <div class="box black-piece">♜</div>
+        </div>
+        <div class="row">
+            <div class="box black-piece">♟</div>
+            <div class="box black-piece">♟</div>
+            <div class="box black-piece">♟</div>
+            <div class="box black-piece">♟</div>
+            <div class="box black-piece">♟</div>
+            <div class="box black-piece">♟</div>
+            <div class="box black-piece">♟</div>
+            <div class="box black-piece">♟</div>
+        </div>
+        <div class="row">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="row">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="row">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="row">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="row">
+            <div class="box white-piece">♙</div>
+            <div class="box white-piece">♙</div>
+            <div class="box white-piece">♙</div>
+            <div class="box white-piece">♙</div>
+            <div class="box white-piece">♙</div>
+            <div class="box white-piece">♙</div>
+            <div class="box white-piece">♙</div>
+            <div class="box white-piece">♙</div>
+        </div>
+        <div class="row">
+            <div class="box white-piece">♖</div>
+            <div class="box white-piece">♘</div>
+            <div class="box white-piece">♗</div>
+            <div class="box white-piece">♕</div>
+            <div class="box white-piece">♔</div>
+            <div class="box white-piece">♗</div>
+            <div class="box white-piece">♘</div>
+            <div class="box white-piece">♖</div>
+        </div>
+    </div>
+</body>
+</html>
