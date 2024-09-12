@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nandini Mullangi - Portfolio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+        }
+        header {
+            background: #007BFF;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #333;
+        }
+        nav a {
+            color: #fff;
+            padding: 15px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            background: #575757;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .intro {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .intro h2 {
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+        .intro p {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section-title {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #007BFF;
+            text-align: center;
+        }
+        .projects, .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .project, .skill {
+            flex: 1 1 300px;
+            margin: 10px;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .project h3, .skill h3 {
+            margin-top: 0;
+            color: #007BFF;
+        }
+        .project p {
+            font-size: 0.9em;
+        }
+        .contact {
+            text-align: center;
+            padding: 40px 0;
+            background: #333;
+            color: #fff;
+        }
+        .contact a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #575757;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Nandini Mullangi</h1>
+    <p>Software Developer | Tech Enthusiast</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+    <section class="intro" id="about">
+        <h2>About Me</h2>
+        <p>I'm Nandini Mullangi, a passionate software developer specializing in web development and machine learning. I am committed to building innovative solutions that make a difference. I am always eager to learn new technologies and take on new challenges.</p>
+    </section>
+
+    <section class="section" id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <h3>Canteen App for College</h3>
+                <p>Developed a canteen management app using MongoDB, HTML, CSS, JavaScript, and Node.js. This app streamlines ordering and payment processes within college canteens, enhancing the overall user experience.</p>
+            </div>
+            <div class="project">
+                <h3>Fake Logo Detection Using CNN</h3>
+                <p>Built a system to detect fake logos using convolutional neural networks (CNNs), which helps protect brands and consumers from counterfeit products by identifying fake logos with high accuracy.</p>
+            </div>
+            <!-- Add more projects here -->
+        </div>
+    </section>
+
+    <section class="section" id="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills">
+            <div class="skill">
+                <h3>Programming Languages</h3>
+                <p>Python, Java</p>
+            </div>
+            <div class="skill">
+                <h3>Web Development</h3>
+                <p>HTML, CSS, JavaScript, Node.js</p>
+            </div>
+            <div class="skill">
+                <h3>Databases</h3>
+                <p>MongoDB</p>
+            </div>
+            <div class="skill">
+                <h3>Soft Skills</h3>
+                <p>Problem-solving, Reasoning, Teamwork</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <p>If you're interested in collaborating or just want to say hello, feel free to reach out!</p>
+    <p>Email: <a href="mailto:nandinimullangi19@gmail.com">nandinimullangi19@gmail.com</a></p>
+    <p>LinkedIn: <a href="#" target="_blank">linkedin.com/in/nandini-mullangi</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2024 Nandini Mullangi. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
