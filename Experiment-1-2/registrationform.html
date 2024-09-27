@@ -1,110 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #e0f7fa;
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             margin: 0;
-            padding: 20px;
         }
+        
         form {
-            max-width: 600px;
-            margin: auto;
-            background: #ffffff;
+            background-color: white;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border: 1px solid #00796b;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
         }
-        .inputbox {
+        
+        h2 {
+            text-align: center;
             margin-bottom: 20px;
+            color: #333;
         }
-        .inputbox label {
-            display: block;
+        
+        label {
             font-weight: bold;
-            margin-bottom: 8px;
-            color: #00796b;
+            margin-bottom: 5px;
+            display: block;
         }
-        .inputbox input[type="text"],
-        .inputbox input[type="number"],
-        .inputbox select {
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"],
+        input[type="file"],
+        textarea,
+        select {
+            width: calc(100% - 10px);
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        
+        input[type="submit"] {
             width: 100%;
             padding: 10px;
-            font-size: 16px;
-            border: 1px solid #00796b;
-            border-radius: 4px;
-            box-sizing: border-box;
-            background-color: #f1f8e9;
-            color: #004d40;
-        }
-        .inputbox input[type="text"]::placeholder,
-        .inputbox input[type="number"]::placeholder {
-            color: #004d40;
-        }
-        .inputbox input[type="radio"] {
-            margin-right: 8px;
-        }
-        .inputbox div {
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-        }
-        .inputbox label[for="male"],
-        .inputbox label[for="female"] {
-            font-weight: normal;
-            color: #004d40;
-        }
-        .inputbox select {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
-            background-color: #f1f8e9;
+            font-size: 16px;
         }
-        .inputbox input[type="radio"] + label {
-            margin-left: 5px;
+        
+        input[type="submit"]:hover {
+            background-color: #45a049;
         }
+
+        div {
+            margin-bottom: 15px;
+        }
+
+        .gender-options label {
+            display: inline-block;
+            margin-right: 10px;
+            font-weight: normal;
+        }
+        
     </style>
 </head>
 <body>
+    
     <form>
-        <div class="inputbox">
-            <label for="name">
-                Name
-                <input id="name" type="text" placeholder="Enter your name" />
-            </label>
+        <h2>Registration Form</h2>
+        
+        <div>
+            <label for="gmail">Email:</label>
+            <input type="email" id="gmail" name="gmail">
         </div>
-        <div class="inputbox">
-            <label for="rollnumber">
-                Roll Number
-                <input id="rollnumber" type="number" name="rollnumber" placeholder="Enter roll number" />
-            </label>
+        
+        <div>
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname">
         </div>
-        <div class="inputbox">
-            <label for="section">
-                Section
-                <select id="section" name="section">
-                    <option value="-">-----</option>
-                    <option value="IT">IT</option>
-                    <option value="CSE">CSE</option>
-                    <option value="EEE">EEE</option>
-                </select>
-            </label>
+        
+        <div>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname">
         </div>
-        <div class="inputbox">
-            <label>
-                Gender
-                <div>
-                    <input type="radio" id="male" name="gender" value="male" />
-                    <label for="male">Male</label>
-                </div>
-                <div>
-                    <input type="radio" id="female" name="gender" value="female" />
-                    <label for="female">Female</label>
-                </div>
-            </label>
+        
+        <div>
+            <label for="Phone no">Phone number:</label>
+            <input type="number" id="Phone no" name="Phone no">
         </div>
+        
+        <div>
+            <label for="DOB">Date of birth:</label>
+            <input type="date" id="DOB" name="DOB">
+        </div>
+        
+        <div>
+            <label for="Address">Address:</label>
+            <textarea name="Address" rows="4" cols="30"></textarea>
+        </div>
+        
+        <div class="gender-options">
+            <label>Gender:</label>
+            <input type="radio" id="Male" name="gender" value="Male">
+            <label for="Male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </div>
+        
+        <div>
+            <label for="myfile">Aadhar Proof:</label>
+            <input type="file" id="myfile" name="myfile">
+        </div>
+        
+        <div>
+            <label for="Roll no">Roll number:</label>
+            <input type="number" id="Roll no" name="Roll no">
+        </div>
+        
+        <div>
+            <label for="Department">Department:</label>
+            <select id="Department" name="Department">
+                <option value="CSE">CSE</option>
+                <option value="IT">IT</option>
+                <option value="AIML">AIML</option>
+                <option value="ECE">ECE</option>
+                <option value="MECHANICAL">MECHANICAL</option>
+                <option value="CHEMICAL">CHEMICAL</option>
+            </select>
+        </div>
+        
+        <div>
+            <label for="section">Section:</label>
+            <select id="section" name="section">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+       
     </form>
 </body>
 </html>
+
+            
+               
