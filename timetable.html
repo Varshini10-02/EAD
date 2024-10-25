@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TimeTable</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        h2 {
+            margin-top: 20px;
+            color: #343a40;
+        }
+
+        table {
+            margin-top: 30px;
+            background-color: #ffffff;
+        }
+
+        th {
+            background-color: #6c757d;
+            color: white;
+            text-align: center;
+        }
+
+        td, th {
+            text-align: center;
+            vertical-align: middle;
+            padding: 12px;
+            border: 1px solid #dee2e6;
+        }
+
+        .vertical-text {
+            width: 1px;
+            word-wrap: break-word;
+            white-space: pre-wrap;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            text-align: center;
+        }
+
+        /* Styling for grey cells */
+        td[style*="background-color:lightgrey"] {
+            background-color: #d3d3d3 !important;
+        }
+
+        td[style*="background-color:grey"] {
+            background-color: #6c757d !important;
+            color: white;
+        }
+
+        /* Adding hover effect */
+        td:hover, th:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Make text bold for period headings */
+        td:nth-child(1), th:nth-child(1) {
+            font-weight: bold;
+        }
+
+        /* Responsive Table */
+        @media (max-width: 768px) {
+            table {
+                width: 100%;
+            }
+            th, td {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="text-align: center;">TimeTable</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Period</th>
+                    <td>I</td>
+                    <td>II</td>
+                    <td>III</td>
+                    <td style="background-color:lightgrey;">12.15 to 1.00 PM</td> 
+                    <td>IV</td>
+                    <td>V</td>
+                    <td>VI</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Day/Time</th>
+                    <td>9.10 To 10.10</td>
+                    <td>10.10 To 11.10</td>
+                    <td>11.15 To 12.15</td>
+                    <td style="background-color:grey;" class="vertical-text" rowspan="7"><b> Lunch Break </b></td> <!-- Empty Lunch Break Column -->
+                    <td>1.00 To 2.00</td>
+                    <td>2.00 To 3.00</td>
+                    <td>3.05 To 4.05</td>
+                </tr>
+                <tr>
+                    <th style="background-color:lightgrey;">Monday</th>
+                    <td colspan="2">CT LAB(B1)/ML LAB(B2)</td>
+                    <td>PE-2</td>
+                    <td>CN</td>
+                    <td>SE</td>
+                    <td>EAD</td>
+                </tr>
+                <tr>
+                    <th style="background-color:lightgrey;">Tuesday</th>
+                    <td>PE-2</td>
+                    <td>ML</td>
+                    <td>EAD</td>
+                    <td>SE</td>
+                    <td colspan="2">CN LAB(B1)/EAD LAB(B2)</td>
+                </tr>
+                <tr>
+                    <th style="background-color:lightgrey;">Wednesday</th>
+                    <td>CN</td>
+                    <td>EAD</td>
+                    <td>FLAT</td>
+                    <td>ML</td>
+                    <td colspan="2">CC(B1)/(SPORTS & LIBRARY(B2))</td>
+                </tr>
+                <tr>
+                    <th style="background-color:lightgrey;">Thursday</th>
+                    <td>ML</td>
+                    <td>CN</td>
+                    <td>CTLAB(B2)/ML LAB(B1)</td>
+                    <td>CTLAB(B2)/ML LAB(B1)</td>
+                    <td>FLAT</td>
+                    <td>SE</td>
+                </tr>
+                <tr>
+                    <th style="background-color:lightgrey;">Friday</th>
+                    <td colspan="2">CN LAB(B2)/EAD LAB(B1)</td>
+                    <td>PE-2</td>
+                    <td>FLAT</td>
+                    <td colspan="2">CCLAB(B2)/(SPORTS & LIBRARY(B1))</td>
+                </tr>
+                <tr>
+                    <th style="background-color:lightgrey;">Saturday</th>
+                    <td>MENTORING</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
